@@ -2,6 +2,18 @@
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
 
+@font-face {
+    font-family: 'Paskowy';
+    src: url('fonts/Paskowy.ttf') format('ttf'),
+         url('fonts/paskowy-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'VCROSDMono';
+    src: url('fonts/VCROSDMono.ttf') format('ttf'),
+         url('fonts/VCROSDMono-webfont.woff') format('woff');
+}
+
 body {
   color: black;
   font-family: 'VCROSDMono';
