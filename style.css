@@ -6,12 +6,16 @@
     font-family: 'Paskowy';
     src: url('fonts/Paskowy.ttf') format('ttf'),
          url('fonts/paskowy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'VCROSDMono';
     src: url('fonts/VCROSDMono.ttf') format('ttf'),
          url('fonts/VCROSDMono-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
