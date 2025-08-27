@@ -1,0 +1,157 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body {
+  color: black;
+  font-family: 'VCROSDMono';
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/subtle-dots.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  font-size:15px;
+}
+
+h1 {
+   font-family: 'Paskowy';
+   color: crimson;
+   font-size: 45px; 
+   text-align: center;
+  }
+  
+  h2,h3,h4{ 
+    color:crimson;
+    text-align: center;
+    }
+
+p,ul,li {
+     font-family: 'VCROSDMono';
+     color: crimson;
+     font-size: 12px;
+     line-height: 1.8;
+}
+
+span {
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+}
+
+div{
+   background-repeat: no-repeat;
+}
+
+/* unvisited link */
+a:link {
+  color: crimson;
+}
+
+/* visited link */
+a:visited {
+  color: gray;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: crimson;
+}
+
+.blinker {
+    animation:blinking 1s infinite;
+}
+@keyframes blinking {
+0%{                      color: crimson;       }
+50%{    color: transparent;        }
+100%{  color: crimson;     }
+}
+
+/*for scrollbar for the other pages*/
+        /* Designing for scroll-bar */
+        ::-webkit-scrollbar {
+            width: 6px;
+  
+        }
+     
+        /* Track */
+        ::-webkit-scrollbar-track {
+            border: 1px solid crimson;
+
+        }
+     
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: crimson;
+
+        }
+     
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: crimson;
+        }
+        
+        /* Add background color to the top navigation */
+.topnav {
+  background-color: transparent;
+  border:1px solid crimson;
+  overflow: hidden;
+  width:auto;
+  min-height: 30px;
+  margin: 0 auto;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 7px 16px;
+  text-decoration: none;
+  font-size: 15px
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: crimson;
+  color: white;
+}
+
+.ekis {
+  background-color: transparent;
+  color: white;
+  height: 30px;
+  width: 30px;
+  padding: 7px 7px;
+  float: right;  
+  border:1px solid crimson;
+  text-align:center;
+}
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 1280px) {
+ .decor {
+ display: none;
+    }
+    
+ .stamp {
+    width: auto;          /* Set the width */ 
+    height: 10px; 
+ }
+}
+
+/*This will hide the image with class ekis if the screen width is less than 600px.*/
+@media (max-width: 600px) {
+  .ekis {
+    display: none;
+  }
+}
