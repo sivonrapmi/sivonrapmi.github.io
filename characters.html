@@ -118,9 +118,71 @@
         </div>
         <!-- THIS IS THE CSS !-->
         <style>
-
-      
+ /* -------My CSS-------- */
+        @font-face {
+  font-family: 'paskowy';
+  src: url(https://sivonrapmi.neocities.org/paskowy-webfont.woff);
+  }
   
+  @font-face {
+  font-family: 'VCROSDMono';
+  src: url(https://sivonrapmi.neocities.org/VCROSDMono-webfont.woff);
+  }
+  
+  p,ul,li{
+        text-align: center;
+        }
+        
+/*BUTTONS CSS*/        
+  /* Red buttons */
+.btn {
+  font-family: 'VCROSDMono';
+  border: 2px solid black;
+  background-color: transparent;
+  color: red;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.danger {
+  border-color: #f44336;
+  color: red
+}
+/* Red buttons end */
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  text-align: center;
+}
+
+/*for centering the buttons*/
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*for centering the buttons end*/
+
+/*CSS BUTTONS END*/
+
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 1280px) {
+ .decor {
+ display: none;
+    }
+    
+ .stamp {
+    width: auto;          /* Set the width */ 
+    height: 10px; 
+ }
+ 
+}
+
  /*------NAVBAR RESPONSIVE------*/
 .topnav .icon {
   display: none;
@@ -190,7 +252,8 @@
   }
 }
        /*------NAVBAR RESPONSIVE END-------*/      
- 
+
+/*------- MY CSS END --------*/   
        
             /* user styles */
 
@@ -362,7 +425,6 @@
                     flex-wrap: wrap;
                 }
             }
-			
 	<!--Gallery CSS-->
 	div.gallery {
   margin: 5px;
