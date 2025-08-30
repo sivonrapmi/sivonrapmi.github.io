@@ -88,30 +88,24 @@
 
 <!--contents -->
 
-	<div class = "box-gallery">
-		<div class="gallery">
-			<!--gallery contents-->
-				<a target="_blank" href="img_5terre.jpg">
-					<img class = "gallery" src="img_5terre.jpg" alt="Cinque Terre" width="350px" height="470px">
-				</a>
-					<div class="desc">Add a description of the image here</div>
+	<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
 
-        </div>
-		<div class="gallery">
-				<a target="_blank" href="img_5terre.jpg">
-					<img class = "gallery" src="img_5terre.jpg" alt="Cinque Terre" width="350px" height="470px">
-				</a>
-					<div class="desc">Add a description of the image here</div>
-					
-		        </div>
-		<div class="gallery">
-				<a target="_blank" href="img_5terre.jpg">
-					<img class = "gallery" src="img_5terre.jpg" alt="Cinque Terre" width="350px" height="470px">
-				</a>
-					<div class="desc">Add a description of the image here</div>
-			<!--gallery contents end -->
-        </div>
-	</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
     
 <!--contents END-->
 
@@ -436,11 +430,7 @@
 			
 		<!--Gallery CSS-->
 	div.gallery {
-  margin: 5px;
-  padding: 5px;
   border: 1px solid #ccc;
-  float: left;
-  width: 180px;
 }
 
 div.gallery:hover {
@@ -448,7 +438,7 @@ div.gallery:hover {
 }
 
 div.gallery img {
-  width: 50%;
+  width: 100%;
   height: auto;
 }
 
@@ -457,18 +447,34 @@ div.desc {
   text-align: center;
 }
 
-img.gallery{
-max-width: 50px;
-max-height:90px;
+* {
+  box-sizing: border-box;
 }
 
-  .box-gallery {
-                background-color: #2A0B05;
-                border: 1px solid crimson;
-                padding: 10px;
-                max-height:1000px;
-                overflow-y: auto;
-            }
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 	<!-- Gallery CSS end-->			
 			
         </style>
