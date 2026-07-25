@@ -586,6 +586,7 @@
 
 div.gallery:hover {
   border: 3px solid #2A0B05;
+  filter: grayscale(0%);
 }
 
 div.gallery img {
@@ -593,6 +594,7 @@ div.gallery img {
   height: auto;
   border: 6px solid #c0c0c0;
   filter: grayscale(100%);
+  transition: filter 0.5s ease;
 }
 
 div.desc {
