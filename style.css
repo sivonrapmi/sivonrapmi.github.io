@@ -641,16 +641,6 @@ a:active {
                 order: 3;
             }
 
-            footer {
-                background-color: #13092D;
-                /* background color for footer */
-                width: 100%;
-                height: 40px;
-                padding: 10px;
-                text-align: center;
-                /* this centers the footer text */
-            }
-
             /* this is just a cool box, it's the darker colored one */
             .box {
                 background-color: #2A0B05;
