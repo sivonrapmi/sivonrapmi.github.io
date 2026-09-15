@@ -148,9 +148,9 @@ a:active {
   text-align:center;
 }
 
-  /* Extra small devices (phones, 600px and down) */
+  /* applies styles to everything from phones and tablets up to standard laptop screens. */
 @media only screen and (max-width: 1280px) {
- img, .decor, .subtitle {
+ .decor, .subtitle {
  display: none;
     }
     
@@ -160,9 +160,9 @@ a:active {
  }
 }
 
-/*This will hide the image with class ekis if the screen width is less than 600px.*/
+/*This will hide images and class ekis if the screen width is less than 600px.*/
 @media (max-width: 600px) {
-  .ekis {
+  img, .ekis {
     display: none;
   }
 }
