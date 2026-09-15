@@ -150,7 +150,7 @@ a:active {
 
   /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 1280px) {
- .decor, .subtitle {
+ img, .decor, .subtitle {
  display: none;
     }
     
@@ -425,18 +425,7 @@ a:active {
             }
 
 
-  /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 1280px) {
- .decor {
- display: none;
-    }
-    
- .stamp {
-    width: auto;          /* Set the width */ 
-    height: 10px; 
- }
- 
-}
+
         
 /*BUTTONS CSS*/        
   /* Red buttons */
