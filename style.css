@@ -147,123 +147,68 @@ a:active {
    NAVIGATION
    ========================================================= */
 
+/* Outer navbar container */
 .topnav {
-  display: flex;
-  align-items: stretch;
+  position: relative;
   width: 100%;
-  min-height: 30px;
+  height: 36px;
+  min-height: 0;
   margin: 0;
+  padding: 0;
   border: 1px solid crimson;
   background: #000;
   overflow: hidden;
 }
 
-.topnav a {
+/* Placeholder containing nav.html */
+#navbar-placeholder {
+  width: 100%;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Actual navigation loaded from nav.html */
+.topnav .navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation links */
+.topnav .navbar a {
   display: block;
-  padding: 7px 16px;
+  flex: 0 0 auto;
+  height: 34px;
+  margin: 0;
+  padding: 9px 16px;
   color: #f2f2f2;
   font-size: 15px;
-  line-height: 1;
+  line-height: 16px;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.topnav a:hover {
+.topnav .navbar a:hover {
   background-color: #ddd;
   color: #000;
 }
 
-.topnav a.active {
+.topnav .navbar a.active {
   background-color: crimson;
   color: #fff;
 }
 
+
+/* Hamburger icon */
 .topnav .icon {
   display: none;
-}
-
-
-/* =========================================================
-   MOBILE NAVIGATION
-   ========================================================= */
-
-@media screen and (max-width: 600px) {
-
-  .topnav {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    width: 100%;
-    min-width: 0;
-    background: #000;
-    border: 1px solid crimson;
-  }
-
-  /* Hide menu links except first link */
-  .topnav a:not(:first-child):not(.icon) {
-    display: none;
-  }
-
-  /* First link / site title */
-  .topnav a:first-child {
-    min-width: 0;
-    overflow: hidden;
-    text-align: left;
-  }
-
-  /* Hamburger */
-  .topnav .icon {
-    display: block;
-    padding: 7px 12px;
-    text-align: center;
-    background: #000;
-  }
-
-
-  /* -------------------------
-     OPEN MENU
-     ------------------------- */
-
-  .topnav.responsive {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    width: 100%;
-    background: #000;
-    border: 1px solid crimson;
-    position: relative;
-    z-index: 1000;
-  }
-
-  /* Site title */
-  .topnav.responsive a:first-child {
-    display: block;
-    grid-column: 1;
-    grid-row: 1;
-    text-align: left;
-  }
-
-  /* Hamburger */
-  .topnav.responsive a.icon {
-    display: block;
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  /* Open menu links */
-  .topnav.responsive a:not(:first-child):not(.icon) {
-    display: block;
-    grid-column: 1 / -1;
-    width: 100%;
-    padding: 10px 16px;
-    text-align: left;
-    background: #000;
-    border-top: 1px solid #2a0000;
-  }
-
-  .topnav.responsive a:not(:first-child):not(.icon):hover {
-    background: #ddd;
-    color: #000;
-  }
 }
 
 
@@ -272,14 +217,21 @@ a:active {
    ========================================================= */
 
 .ekis {
-  background-color: transparent;
-  color: white;
-  width: 30px;
-  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+
+  width: 38px;
+  height: 36px;
   padding: 7px;
-  float: right;
+
+  background-color: #000;
+  color: white;
   border: 1px solid crimson;
+
   text-align: center;
+  line-height: 20px;
 }
 
 
@@ -537,18 +489,124 @@ div.desc {
   #rightSidebar {
     order: 3;
   }
-
-  #navbar ul {
-    flex-wrap: wrap;
-  }
 }
 
 
 /* =========================================================
-   PHONE
+   PHONE NAVIGATION
    ========================================================= */
 
 @media only screen and (max-width: 600px) {
+
+  /* -----------------------------------------
+     NAVBAR
+     ----------------------------------------- */
+
+  .topnav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    background: #000;
+    border: 1px solid crimson;
+    overflow: hidden;
+  }
+
+  /* Navigation placeholder */
+  #navbar-placeholder {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+  }
+
+  /* Navbar becomes vertical */
+  .topnav .navbar {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Hide all links except Home */
+  .topnav .navbar a {
+    display: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 7px 16px;
+  }
+
+  /* Show Home */
+  .topnav .navbar a:first-child {
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  /* Show hamburger */
+  .topnav .icon {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    padding: 7px 12px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background: #000;
+    border: 1px solid crimson;
+  }
+
+
+  /* -----------------------------------------
+     OPEN MOBILE MENU
+     ----------------------------------------- */
+
+  .topnav.responsive {
+    position: relative;
+    z-index: 1000;
+    height: auto;
+  }
+
+  /* Show all navigation links */
+  .topnav.responsive .navbar {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .topnav.responsive .navbar a {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px 16px;
+    text-align: left;
+    background: #000;
+    border-top: 1px solid #2a0000;
+  }
+
+  .topnav.responsive .navbar a:hover {
+    background: #ddd;
+    color: #000;
+  }
+
+  /* Keep Home at the top */
+  .topnav.responsive .navbar a:first-child {
+    text-align: left;
+  }
+
+  /* Hamburger remains in upper-right */
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+
+  /* -----------------------------------------
+     OTHER PHONE STYLES
+     ----------------------------------------- */
 
   .ekis {
     display: none;
@@ -566,11 +624,11 @@ div.desc {
   #header {
     background-size: cover;
   }
-  
-  /* to hide gallery thumbnails in smaller screens*/
+
+  /* Hide gallery thumbnails on smaller screens */
   .hide-img-gal {
-        display: none;
-  
+    display: none;
+  }
 }
 
 
