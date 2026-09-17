@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: "Paskowy";
-  src: url("https://sivonrapmi.neocities.org/paskowy-webfont.woff");
+  src: url("https://sivonrapmi.neocities.org/fonts/paskowy-webfont.woff");
 }
 
 @font-face {
   font-family: "VCROSDMono";
-  src: url("https://sivonrapmi.neocities.org/VCROSDMono-webfont.woff");
+  src: url("https://sivonrapmi.neocities.org/fonts/VCROSDMono-webfont.woff");
 }
 
 
@@ -452,8 +452,7 @@ div.desc {
 
 @media only screen and (max-width: 1280px) {
 
-  .decor,
-  .subtitle {
+  .decor {
     display: none;
   }
 
@@ -668,4 +667,57 @@ ATABOOK
   }
 }
 
+/*=============================
+CAT STATUS
+==================================*/
 
+.status-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.pixel-bubble {
+  position: relative;
+  background: #c0c0c0;
+  border: 3px solid #111;
+  padding: 12px 18px;
+  font-size: 12px;
+  image-rendering: pixelated;
+  
+}
+
+/* Stepped pixel tail pointing right */
+/* Black outer triangle */
+.pixel-bubble::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -14px;
+  transform: translateY(-50%);
+
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 14px solid #111;
+
+  z-index: 0;
+}
+
+/* White inner triangle */
+.pixel-bubble::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -9px;
+  transform: translateY(-50%);
+
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid #c0c0c0;
+
+  z-index: 1;
+}
