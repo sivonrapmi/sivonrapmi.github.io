@@ -1,723 +1,177 @@
-/* =========================================================
-   FONTS
-   ========================================================= */
-
-@font-face {
-  font-family: "Paskowy";
-  src: url("https://sivonrapmi.neocities.org/fonts/paskowy-webfont.woff");
-}
-
-@font-face {
-  font-family: "VCROSDMono";
-  src: url("https://sivonrapmi.neocities.org/fonts/VCROSDMono-webfont.woff");
-}
-
-
-/* =========================================================
-   GLOBAL
-   ========================================================= */
-
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  --header-image: url("https://i.pinimg.com/originals/8a/e1/04/8ae104a88d8fd8e5c4d1a9cbea4d4c96.gif");
-  --crimson: crimson;
-  --dark-red: #2a0b05;
-  --gray: #c0c0c0;
-}
-
-body {
-  margin: 0;
-  color: black;
-  font-family: "VCROSDMono", monospace;
-  font-size: 15px;
-  background-color: #000;
-  background-image: url("https://www.transparenttextures.com/patterns/subtle-dots.png");
-}
-
-div {
-  background-repeat: no-repeat;
-}
-
-
-/* =========================================================
-   TEXT
-   ========================================================= */
-
-h1 {
-  font-family: "Paskowy", monospace;
-  color: crimson;
-  font-size: 45px;
-  text-align: center;
-}
-
-h2,
-h3,
-h4 {
-  color: crimson;
-  text-align: center;
-}
-
-p,
-ul,
-li {
-  font-family: "VCROSDMono", monospace;
-  color: crimson;
-  font-size: 12px;
-  line-height: 1.8;
-  text-align: center;
-}
-
-span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-/* =========================================================
-   LINKS
-   ========================================================= */
-
-a:link {
-  color: crimson;
-}
-
-a:visited {
-  color: gray;
-}
-
-a:hover {
-  color: white;
-}
-
-a:active {
-  color: crimson;
-}
-
-
-/* =========================================================
-   BLINKING TEXT
-   ========================================================= */
-
-.blinker {
-  animation: blinking 1s infinite;
-}
-
-@keyframes blinking {
-  0% {
-    color: crimson;
-  }
-
-  50% {
-    color: transparent;
-  }
-
-  100% {
-    color: crimson;
-  }
-}
-
-
-/* =========================================================
-   SCROLLBAR
-   ========================================================= */
-
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  border: 1px solid crimson;
-}
-
-::-webkit-scrollbar-thumb {
-  background: crimson;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: crimson;
-}
-
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-
-/* Outer navbar container */
-.topnav {
-  position: relative;
-  width: 100%;
-  height: 36px;
-  min-height: 0;
-  margin: 0;
-  padding: 0;
-  border: 1px solid crimson;
-  background: #000;
-  overflow: hidden;
-}
-
-/* Placeholder containing nav.html */
-#navbar-placeholder {
-  width: 100%;
-  height: 34px;
-  margin: 0;
-  padding: 0;
-}
-
-/* Actual navigation loaded from nav.html */
-.topnav .navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  height: 34px;
-  margin: 0;
-  padding: 0;
-}
-
-/* Navigation links */
-.topnav .navbar a {
-  display: block;
-  flex: 0 0 auto;
-  height: 34px;
-  margin: 0;
-  padding: 9px 16px;
-  color: #f2f2f2;
-  font-size: 15px;
-  line-height: 16px;
-  text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.topnav .navbar a:hover {
-  background-color: #ddd;
-  color: #000;
-}
-
-.topnav .navbar a.active {
-  background-color: crimson;
-  color: #fff;
-}
-
-
-/* Hamburger icon */
-.topnav .icon {
-  display: none;
-}
-
-
-/* =========================================================
-   EKIS BUTTON
-   ========================================================= */
-
-.ekis {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-
-  width: 38px;
-  height: 36px;
-  padding: 7px;
-
-  background-color: #000;
-  color: white;
-  border: 1px solid crimson;
-
-  text-align: center;
-  line-height: 20px;
-}
-
-
-/* =========================================================
-   SITE CONTAINER
-   ========================================================= */
-
-#container {
-  width: 100%;
-  max-width: 1020px;
-  margin: 0 auto;
-  border: 1px solid crimson;
-}
-
-#container a {
-  font-weight: bold;
-}
-
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-#header {
-  width: 100%;
-  height: 150px;
-  background-color: #5e4e8c;
-  background-image: var(--header-image);
-  background-size: 100%;
-}
-
-
-/* =========================================================
-   MAIN LAYOUT
-   ========================================================= */
-
-#flex {
-  display: flex;
-  min-width: 0;
-}
-
-aside {
-  width: 200px;
-  padding: 20px;
-  border: 1px solid crimson;
-  font-size: smaller;
-}
-
-main {
-  flex: 1 1 auto;
-  min-width: 0;
-  padding: 20px;
-  order: 2;
-  max-height: 900px;
-  overflow-y: auto;
-}
-
-#leftSidebar {
-  order: 1;
-}
-
-#rightSidebar {
-  order: 3;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer {
-  width: 100%;
-  height: 40px;
-  padding: 10px;
-  background-color: #2a0b05;
-  text-align: center;
-}
-
-
-/* =========================================================
-   BOXES
-   ========================================================= */
-
-.box {
-  max-height: 500px;
-  padding: 10px;
-  overflow-y: auto;
-  background-color: #2a0b05;
-  border: 1px solid crimson;
-}
-
-#topBar {
-  width: 100%;
-  height: 30px;
-  padding: 10px;
-  font-size: smaller;
-  background-color: #13092d;
-}
-
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-.btn {
-  padding: 5px 10px;
-  font-family: "VCROSDMono", monospace;
-  font-size: 16px;
-  color: red;
-  background-color: transparent;
-  border: 2px solid black;
-  cursor: pointer;
-}
-
-.danger {
-  color: red;
-  border-color: #f44336;
-}
-
-.button-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  text-align: center;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/* =========================================================
-   STAMP
-   ========================================================= */
-
-.stamp {
-  width: auto;
-  height: 10px;
-}
-
-
-/* =========================================================
-   CONNECTIONS
-   ========================================================= */
-
-.row {
-  display: flex;
-}
-
-.column {
-  flex: 33.33%;
-  padding: 5px;
-}
-
-
-/* =========================================================
-   GALLERY
-   ========================================================= */
-
-div.gallery {
-  border: 0;
-}
-
-div.gallery:hover img {
-  border: 3px solid #2a0b05;
-  filter: grayscale(0%);
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-  border: 6px solid #c0c0c0;
-  filter: grayscale(100%);
-  transition: filter 0.5s ease;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-  background-color: #c0c0c0;
-}
-
-/*
-   "responsive" was renamed to "gallery-item"
-   so it doesn't conflict with the mobile navbar.
-*/
-
-.gallery-item {
-  float: left;
-  width: 24.99999%;
-  padding: 6px;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-/* Gallery box */
-
-.box-gallery {
-  min-height: 500px;
-  max-height: 500px;
-  padding: 10px;
-  overflow-y: auto;
-  background-color: #2a0b05;
-  border: 1px solid crimson;
-}
-
-
-/* =========================================================
-   RESPONSIVE LAYOUT
-   ========================================================= */
-
-@media only screen and (max-width: 1280px) {
-
-  .decor {
-    display: none;
-  }
-
-  .stamp {
-    width: auto;
-    height: 10px;
-  }
-}
-
-
-/* =========================================================
-   TABLET / MOBILE LAYOUT
-   ========================================================= */
-
-@media only screen and (max-width: 900px) {
-
-  #flex {
-    flex-wrap: wrap;
-  }
-
-  aside {
-    width: 100%;
-  }
-
-  main {
-    order: 1;
-  }
-
-  #leftSidebar {
-    order: 2;
-  }
-
-  #rightSidebar {
-    order: 3;
-  }
-}
-
-
-/* =========================================================
-   PHONE NAVIGATION
-   ========================================================= */
-
-@media only screen and (max-width: 600px) {
-
-  /* -----------------------------------------
-     NAVBAR
-     ----------------------------------------- */
-
-  .topnav {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    width: 100%;
-    height: auto;
-    min-width: 0;
-    min-height: 0;
-    background: #000;
-    border: 1px solid crimson;
-    overflow: hidden;
-  }
-
-  /* Navigation placeholder */
-  #navbar-placeholder {
-    width: 100%;
-    height: auto;
-    min-width: 0;
-  }
-
-  /* Navbar becomes vertical */
-  .topnav .navbar {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  /* Hide all links except Home */
-  .topnav .navbar a {
-    display: none;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 7px 16px;
-  }
-
-  /* Show Home */
-  .topnav .navbar a:first-child {
-    display: block;
-    overflow: hidden;
-    text-align: left;
-    white-space: nowrap;
-  }
-
-  /* Show hamburger */
-  .topnav .icon {
-    display: block;
-    grid-column: 2;
-    grid-row: 1;
-    padding: 7px 12px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    background: #000;
-    border: 1px solid crimson;
-  }
-
-
-  /* -----------------------------------------
-     OPEN MOBILE MENU
-     ----------------------------------------- */
-
-  .topnav.responsive {
-    position: relative;
-    z-index: 1000;
-    height: auto;
-  }
-
-  /* Show all navigation links */
-  .topnav.responsive .navbar {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .topnav.responsive .navbar a {
-    display: block;
-    width: 100%;
-    height: auto;
-    padding: 10px 16px;
-    text-align: left;
-    background: #000;
-    border-top: 1px solid #2a0000;
-  }
-
-  .topnav.responsive .navbar a:hover {
-    background: #ddd;
-    color: #000;
-  }
-
-  /* Keep Home at the top */
-  .topnav.responsive .navbar a:first-child {
-    text-align: left;
-  }
-
-  /* Hamburger remains in upper-right */
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-
-  /* -----------------------------------------
-     OTHER PHONE STYLES
-     ----------------------------------------- */
-
-  .ekis {
-    display: none;
-  }
-
-  .gallery-item {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-
-  .button-container {
-    grid-template-columns: 1fr;
-  }
-
-  #header {
-    background-size: cover;
-  }
-
-  /* Hide gallery thumbnails on smaller screens */
-  .hide-img-gal {
-    display: none;
-  }
-}
-
-
-/* =========================================================
-   SMALL PHONE
-   ========================================================= */
-
-@media only screen and (max-width: 500px) {
-
-  .gallery-item {
-    width: 100%;
-  }
-
-}
-
-/* =================================
-ATABOOK
-====================================*/
-.atabook-frame {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.atabook-frame iframe {
-  display: block;
-  width: 100%;
-  height: 80vh;
-  min-height: 500px;
-  border: none;
-}
-
-@media (max-width: 600px) {
-  .atabook-frame iframe {
-    height: 90vh;
-    min-height: 600px;
-  }
-}
-
-/*=============================
-CAT STATUS
-==================================*/
-
-.status-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.pixel-bubble {
-  position: relative;
-  background: #c0c0c0;
-  border: 3px solid #111;
-  padding: 12px 18px;
-  font-size: 12px;
-  image-rendering: pixelated;
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- favicons-->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <!-- end of favicons-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sivonrapmi</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+       <!-- Font awesome css for signs/logos. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+    
+  </head>
+  <body>
+    <h1 style="font-size:50px;">BLOG</h1>
+
+   
+
+        <div id="container"><div id="header"></div>
+            <div id="headerArea">
+                
+<!-- navigation-->
+<div class="topnav" id="myTopnav">
+
+   <!-- Navigation placeholder -->
+  <div id="navbar-placeholder"></div> 
+   <!--navigation placeholder end-->
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()" style = "float: right;  border: 1px solid crimson; max-height:29px;">
+    <i class="fa fa-bars"></i>
+  </a>
   
-}
+<div class = "ekis">X</div>  
+</div>
+<!-- end nav-->
 
-/* Stepped pixel tail pointing right */
-/* Black outer triangle */
-.pixel-bubble::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -14px;
-  transform: translateY(-50%);
+            <div id="flex">
+                <aside id="leftSidebar" style="margin-right: 0px;">
+                    <h2>Stamps<c class="blinker">_</c></h2>
+                    <div class="box">
+                    <center>
+                          <h3>Miscellaneous</h3>
+                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2aa82ccd-82ba-405a-9c68-0e8304a14536/d8q8m64-3db8b8ac-4591-44e3-a1b1-9df14bd6d786.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJhYTgyY2NkLTgyYmEtNDA1YS05YzY4LTBlODMwNGExNDUzNlwvZDhxOG02NC0zZGI4YjhhYy00NTkxLTQ0ZTMtYTFiMS05ZGYxNGJkNmQ3ODYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.t2EGFyE0zn8T7nqYRQp_F2xBHdENyChQ-JyH4BfYqTE" class = "stamp" style="width:70%; height:70%;"/>
+                      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/50b0101e-945f-44f0-83bb-a0b9b460867b/dasml3w-7f410f5f-2aba-47fb-9d0d-c46a220b3223.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi81MGIwMTAxZS05NDVmLTQ0ZjAtODNiYi1hMGI5YjQ2MDg2N2IvZGFzbWwzdy03ZjQxMGY1Zi0yYWJhLTQ3ZmItOWQwZC1jNDZhMjIwYjMyMjMuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pzl2iU2FIyQxuvHCDRaDjbjxh7EQvykRsU0DmyQUXWk" class = "stamp" style="width:70%; height:70%;"/>
+                      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/50b0101e-945f-44f0-83bb-a0b9b460867b/dahp67f-906c247d-46af-4a5a-b49c-05f159e134fc.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi81MGIwMTAxZS05NDVmLTQ0ZjAtODNiYi1hMGI5YjQ2MDg2N2IvZGFocDY3Zi05MDZjMjQ3ZC00NmFmLTRhNWEtYjQ5Yy0wNWYxNTllMTM0ZmMuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.1ylpxy_kKI_P7x4KPtr4zehhCsw7579-snY9GZJ3VMs" class = "stamp" style="width:70%; height:70%;"/>
+                        <img src="https://64.media.tumblr.com/5d6e5db1972d10fb7d4707c72ead9dd0/e5e999bb453b6265-1e/s100x200/a36e9490870cc4b6107214ab83a822d376f4ef83.gifv"  style="width:70%; height:70%;"/>
+                         <img src="https://64.media.tumblr.com/2d579b93f381ef1929bbfb7d8510f7e7/772a6c5f5f7c3182-14/s250x400/beeb43649e4b2601130f086ebac98bc7688cd910.pnj"  style="width:70%; height:70%;"/>
+                            <img src="https://64.media.tumblr.com/7ef381542fce98b57e1b35d705c5ceef/a6d3d53949489c00-c3/s100x200/ab716680b86de3f474557e7f4442dd02bb3da105.pnj"  style="width:70%; height:70%;"/>
+                        <img src="https://64.media.tumblr.com/4a8dcf74a3257ca4d656f55595775704/a479880211fda7ba-35/s100x200/ff95841c21a107a4af9faea8e9d7ab810b30a322.pnj" class = "stamp" style="width:70%; height:70%;"/>
+                        <img src="https://64.media.tumblr.com/558da126d92e97a87c51ee1fcbd7d651/ff58a3af22f3bbb7-de/s100x200/e33c4309b6e5b7ec34a57b2895abb16cd514ec9e.pnj" class = "stamp" style="width:70%; height:70%;"/>
+                        <img src="https://64.media.tumblr.com/81aa99e18bb73c638b8312c799ab953e/f1413ef45abf2485-61/s100x200/0bd9497a3a804d70b4e48d2b53ddb984d21a72f7.pnj" class = "stamp" style="width:70%; height:70%;"/>
+                        <img src="https://64.media.tumblr.com/607958ef780fcc23a894bfec472c65d9/8233a114c30a66c3-90/s100x200/47f48788791d0efbf4b5aaf174177dfc73b5b794.pnj" class = "stamp" style="width:70%; height:70%;"/>
+                        <img src="https://64.media.tumblr.com/0b5c6dc0ad41122d1868b027bbb1e207/d9a59b71a0818c17-29/s100x200/40b4236f799ae86ae05b780da324aa98770be2e6.gifv" class = "stamp" style="width:70%; height:70%;"/>
+                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a05ab71b-2429-4c71-b3f2-74abd1ef5d31/dhezhda-127ddc46-36b2-407d-9fe5-2e1224d48dd1.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2EwNWFiNzFiLTI0MjktNGM3MS1iM2YyLTc0YWJkMWVmNWQzMVwvZGhlemhkYS0xMjdkZGM0Ni0zNmIyLTQwN2QtOWZlNS0yZTEyMjRkNDhkZDEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.lUDybiffuf3ED7GHt3PYy5bjImHsSHC2Qji7Q3xrzPQ" class = "stamp" style="width:70%; height:70%;"/>
+                        <img src="https://64.media.tumblr.com/37b5ce1554844473844762852d7a162a/70199db9eea296dd-6a/s100x200/de53c71ee847929a6d95b3e0e92e8b36e3b1b4b8.pnj" class = "stamp" style="width:70%; height:70%;"/>
+                        <img src="https://64.media.tumblr.com/e483df3b9c4e9a73d6e7f56a4c8af09b/da486285ab7820ed-6b/s100x200/7f8c73e8da84b74b5aef37dbe938fe61fbf6cde3.gifv" class = "stamp" style="width:70%; height:70%;"/>
+                        <h3>Pride</h3>
+                        <img src="https://64.media.tumblr.com/676bdeeeeb25c938dbf33131aab354cd/85e0f5d14f85bcb6-dc/s100x200/02c2a264d858d9e3256a031c112615ea63d7f0e3.pnj" class = "stamp" style="width:70%; height:70%;"/>
+                        <img src="https://64.media.tumblr.com/b90e4d42f061708aa11a69f01558c2ba/85e0f5d14f85bcb6-7c/s100x200/fd84755308a0207fe8f00293db98c31b55c32d43.pnj" class = "stamp" style="width:70%; height:70%;"/>
+                        <img src="https://64.media.tumblr.com/70b2e1a17ae03ac6c4cae7ca0a198f51/85e0f5d14f85bcb6-8e/s100x200/c80d4cbaaed1474c9aa751ccb380fc99fc011409.pnj" class = "stamp" style="width:70%; height:70%;"/>
+                        <img src="https://64.media.tumblr.com/8b87375d53444578ef94995d9d410f32/5b27dc655239745a-8a/s100x200/c3062ff0b3d1012108cba59629315aaa009c818b.pnj" class = "stamp" style="width:70%; height:70%;"/>
+                        <img src="https://64.media.tumblr.com/a6047b67102665942484be61149eaa60/cf3b10b9ee0f99e2-11/s100x200/e29d52ae04e5b9697bd95e4b0b487b6c7a0a69e3.pnj" class = "stamp" style="width:70%; height:70%;"/>
+                        </center>
+                    </div>
+                    
+                    <br>
+                    <h2>What the hell is this guy doing?<c class="blinker">_</c></h2>
+                    <p>Here you could see statuses and updates from several places such as status.cafe, tumblr, or wordpress.</p>
+                     <center><img src="https://64.media.tumblr.com/622750aea07c6ebd0ff7c6697136bb3f/2302073302ba67d6-9d/s500x750/538bd5f96e0517cc712f921dc3302e421ed34e5e.gifv" class = "decor" style="width:150px; height:65px;"></center>
+                    <p style="color:gray;">This page was made with the help of <a style="color:gray;" href="https://sadgrl.online/projects/layout-builder">this site</a>.</p>                 
+                </aside>
+                
+                <!--MAIN CONTENT-->
+                <main>
+                    <h2><img src = "images/HANDY.png" class = "decor" style="width:70px; height:40px;">What the hap is fuckening?<c class="blinker">_</c></h2>
+                    
+<center> <img src ="images/rosebanner.png" class = "decor"></center>
+<br>
 
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 14px solid #111;
+<center>
 
-  z-index: 0;
-}
+<!-- start sw-rss-feed code --> 
+<script type="text/javascript"> 
+<!-- 
+rssfeed_url = new Array(); 
+rssfeed_url[0]="https://status.cafe/users/sivonratmeat.atom"; 
+rssfeed_url[1]="https://sivonrapmi.tumblr.com/tagged/sivonsart/rss"; 
+rssfeed_url[2]="https://sivonrapmi.tumblr.com/tagged/sivonsthoughts/rss";  
+rssfeed_url[3]="https://sivonrapmi.wordpress.com/category/oc-thoughts/feed"; 
+rssfeed_url[4]="https://sivonratmeat.wordpress.com/feed"; 
+rssfeed_frame_width="100%"; 
+rssfeed_frame_height="500px"; 
+rssfeed_scroll="on"; 
+rssfeed_scroll_step="6"; 
+rssfeed_scroll_bar="off"; 
+rssfeed_target="_blank"; 
+rssfeed_font_size="15"; 
+rssfeed_font_face=""; 
+rssfeed_border="off"; 
+rssfeed_css_url=""; 
+rssfeed_title="off"; 
+rssfeed_title_name=""; 
+rssfeed_title_bgcolor="#3366ff"; 
+rssfeed_title_color="#fff"; 
+rssfeed_title_bgimage=""; 
+rssfeed_footer="off"; 
+rssfeed_footer_name="rss feed"; 
+rssfeed_footer_bgcolor="#fff"; 
+rssfeed_footer_color="#333"; 
+rssfeed_footer_bgimage=""; 
+rssfeed_item_title_length="200"; 
+rssfeed_item_title_color="#ff0000"; 
+rssfeed_item_bgcolor="#000"; 
+rssfeed_item_bgimage=""; 
+rssfeed_item_border_bottom="on"; 
+rssfeed_item_source_icon="off"; 
+rssfeed_item_date="off"; 
+rssfeed_item_description="on"; 
+rssfeed_item_description_length="120"; 
+rssfeed_item_description_color="#909090"; 
+rssfeed_item_description_link_color="#333"; 
+rssfeed_item_description_tag="off"; 
+rssfeed_no_items="0"; 
+rssfeed_cache = "3ac6d9555cbd48d984668c0243245887"; 
+//--> 
+</script> 
+<script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script> 
+<!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. --> 
+<div style="color:#ccc;font-size:10px; text-align:right; width:230px;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a></div> 
+<!-- end sw-rss-feed code -->
 
-/* White inner triangle */
-.pixel-bubble::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -9px;
-  transform: translateY(-50%);
+</center>
 
-  width: 0;
-  height: 0;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 10px solid #c0c0c0;
+<br>
+<center> <img src ="images/rosebanner.png" class = "decor"></center>
 
-  z-index: 1;
-}
+
+<!-- CAT START -->
+<div class="center">
+
+     <div class="status-container">
+	   <div class="pixel-bubble">
+	     <div id="statuscafe">
+	     <div id="statuscafe-username"></div>
+	     <div id="statuscafe-content"></div>
+	     </div>
+	     <script src="https://status.cafe/current-status.js?name=sivonratmeat" defer></script>
+	     </div>
+       <div class="pointer"></div>
+       </div>
+             <img src="images/cat.jpg" style="max-height:90px; width:auto; filter: grayscale(100%);"/>
+    </div>
+
+                </main>
+                
+            </div>
+            
+        </div>
+        </div>
+<!-- CAT END -->     
+
+<script src="script.js"></script>
+
+  </body>
+</html>
