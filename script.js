@@ -213,9 +213,7 @@ async function loadTumblr() {
 
                 feeds.map(feed => {
                    
-/*TESTING*/
-                    console.log("Trying feed:", feed);
-/*TESTING*/
+
                    
                     const rssApi =
                         "https://api.rss2json.com/v1/api.json?rss_url=" +
