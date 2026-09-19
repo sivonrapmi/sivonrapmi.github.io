@@ -3,14 +3,14 @@
    ========================================================= */
 
 @font-face {
-  font-family: "Paskowy";
-  src: url("https://sivonrapmi.neocities.org/fonts/paskowy-webfont.woff");
-}
+  font-family: 'paskowy';
+  src: url(fonts/paskowy-webfont.woff);
+  }
 
-@font-face {
-  font-family: "VCROSDMono";
-  src: url("https://sivonrapmi.neocities.org/fonts/VCROSDMono-webfont.woff");
-}
+  @font-face {
+  font-family: 'VCROSDMono';
+  src: url(fonts/VCROSDMono-webfont.woff);
+  }
 
 
 /* =========================================================
