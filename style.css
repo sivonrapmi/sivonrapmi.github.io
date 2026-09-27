@@ -3,14 +3,14 @@
    ========================================================= */
 
 @font-face {
-  font-family: 'paskowy';
-  src: url(fonts/paskowy-webfont.woff);
-  }
+  font-family: "Paskowy";
+  src: url("fonts/paskowy-webfont.woff");
+}
 
-  @font-face {
-  font-family: 'VCROSDMono';
-  src: url(fonts/VCROSDMono-webfont.woff);
-  }
+@font-face {
+  font-family: "VCROSDMono";
+  src: url("fonts/VCROSDMono-webfont.woff");
+}
 
 
 /* =========================================================
@@ -439,14 +439,18 @@ div.desc {
 @media only screen and (max-width: 1280px) {
 
   .decor {
-    display: none;
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
 
   .stamp {
     width: auto;
-    height: 10px;
+    height: auto;
+    max-width: 100%;
   }
 }
+
 
 
 /* =========================================================
@@ -666,469 +670,30 @@ div.desc {
    TUMBLR / BEAR BLOG RSS FEED
    ========================================================= */
 
-.tumblr-feed {
-  width: 100%;
-  margin-top: 30px;
+.rss-feed img {
+  max-width:100%;
 }
 
-.tumblr-feed h2 {
-  margin-bottom: 20px;
+.rss-feed ul,
+.rss-feed li,
+.rss-feed p {
+  text-align: left;
+  font-size: 14px;
 }
 
+  
 
-/* ==============================
-   INDIVIDUAL POSTS
-   ============================== */
-
-.tumblr-post {
-  background: var(--dark-red);
-  border: 1px solid crimson;
+.rss-feed-box div {
+  background: #2a0b05;
   margin-bottom: 25px;
   padding: 15px;
-
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-
   overflow: hidden;
 }
-
-
-/* ==============================
-   POST HEADER
-   ============================== */
-
-.tumblr-post-header {
-  border-bottom: 1px dotted crimson;
-  padding-bottom: 8px;
-  margin-bottom: 15px;
-
-  text-align: left;
-}
-
-
-/* Date / source link */
-
-.tumblr-post-header a {
-  color: crimson;
-
-  font-family: "VCROSDMono", monospace;
-  font-size: 10px;
-
-  text-decoration: none;
-}
-
-.tumblr-post-header a:hover {
-  color: white;
-}
-
-
-/* ==============================
-   BEAR BLOG TITLES
-   ============================== */
-
-.tumblr-post-title {
-  margin: 0 0 10px 0;
-
-  color: crimson;
-
-  font-family: "VCROSDMono", monospace;
-  font-size: 19px;
-  line-height: 1.8;
-
-  text-align: left;
-}
-
-
-/* ==============================
-   POST CONTENT
-   ============================== */
-
-.tumblr-post-content {
-  color: crimson;
-
-  font-family: "VCROSDMono", monospace;
-  font-size: 12px;
-  line-height: 1.8;
-
-  text-align: left;
-
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
-
-.tumblr-post-content * {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-
-/* ==============================
-   TEXT
-   ============================== */
-
-.tumblr-post-content p {
-  color: crimson;
-
-  font-family: "VCROSDMono", monospace;
-  font-size: 12px;
-  line-height: 1.8;
-
-  text-align: left;
-
-  margin: 0 0 12px 0;
-}
-
-
-/* ==============================
-   IMAGES
-   ============================== */
-
-.tumblr-post-content img {
-  display: block;
-
-  width: auto;
-  max-width: 100%;
-  height: auto;
-
-  margin: 15px auto;
-
-  border: 1px solid crimson;
-
-  box-sizing: border-box;
-}
-
-.tumblr-post-content a img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-/* ==============================
-   VIDEOS
-   ============================== */
-
-.tumblr-post-content video {
-  display: block;
-
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-
-  margin: 15px auto;
-
-  box-sizing: border-box;
-}
-
-
-/* ==============================
-   IFRAMES / EMBEDS
-   ============================== */
-
-.tumblr-post-content iframe {
-  display: block;
-
-  width: 100% !important;
-  max-width: 100% !important;
-
-  aspect-ratio: 16 / 9;
-
-  height: auto !important;
-
-  margin: 15px auto;
-
-  border: 0;
-
-  box-sizing: border-box;
-}
-
-.tumblr-post-content embed,
-.tumblr-post-content object {
-  display: block;
-
-  width: 100% !important;
-  max-width: 100% !important;
-
-  height: auto !important;
-
-  margin: 15px auto;
-
-  box-sizing: border-box;
-}
-
-
-/* ==============================
-   BLOCKQUOTES
-   ============================== */
-
-.tumblr-post-content blockquote {
-  max-width: 100%;
-
-  margin: 15px 0;
-  padding-left: 12px;
-
-  border-left: 2px solid crimson;
-
-  color: crimson;
-
-  box-sizing: border-box;
-}
-
-
-/* ==============================
-   LINKS
-   ============================== */
-
-.tumblr-post-content a {
-  color: crimson;
-
-  overflow-wrap: anywhere;
-}
-
-.tumblr-post-content a:hover {
-  color: white;
-}
-
-
-/* ==============================
-   HEADINGS INSIDE POSTS
-   ============================== */
-
-.tumblr-post-content h1,
-.tumblr-post-content h2,
-.tumblr-post-content h3,
-.tumblr-post-content h4,
-.tumblr-post-content h5,
-.tumblr-post-content h6 {
-  font-family: "VCROSDMono", monospace;
-  font-size: 19px;
-  line-height: 1.8;
-  color: crimson;
-  text-align: left;
-}
-
-
-/* ==============================
-   LISTS
-   ============================== */
-
-.tumblr-post-content ul,
-.tumblr-post-content ol {
-  max-width: 100%;
-
-  padding-left: 25px;
-
-  color: crimson;
-
-  box-sizing: border-box;
-}
-
-.tumblr-post-content li {
-  color: crimson;
-
-  font-family: "VCROSDMono", monospace;
-  font-size: 12px;
-
-  line-height: 1.8;
-}
-
-
-/* ==============================
-   FIGURES / CAPTIONS
-   ============================== */
-
-.tumblr-post-content figure {
-  max-width: 100%;
-
-  margin: 15px 0;
-  padding: 0;
-
-  box-sizing: border-box;
-}
-
-.tumblr-post-content figcaption {
-  max-width: 100%;
-
-  color: crimson;
-
-  font-family: "VCROSDMono", monospace;
-  font-size: 10px;
-  line-height: 1.7;
-
-  text-align: left;
-
-  box-sizing: border-box;
-}
-
-
-/* ==============================
-   TABLES
-   ============================== */
-
-.tumblr-post-content table {
-  display: block;
-
-  width: 100%;
-  max-width: 100%;
-
-  overflow-x: auto;
-
-  border-collapse: collapse;
-
-  color: crimson;
-
-  box-sizing: border-box;
-}
-
-.tumblr-post-content td,
-.tumblr-post-content th {
-  border: 1px solid crimson;
-
-  padding: 5px;
-
-  color: crimson;
-
-  font-family: "VCROSDMono", monospace;
-  font-size: 11px;
-}
-
-
-/* ==============================
-   PRE / CODE
-   ============================== */
-
-.tumblr-post-content pre {
-  max-width: 100%;
-
-  overflow-x: auto;
-
-  padding: 10px;
-
-  border: 1px solid crimson;
-
-  background: black;
-
-  color: crimson;
-
-  box-sizing: border-box;
-}
-
-.tumblr-post-content code {
-  color: crimson;
-
-  font-family: "VCROSDMono", monospace;
-
-  overflow-wrap: break-word;
-}
-
-
-/* ==============================
-   POST FOOTER
-   ============================== */
-
-.tumblr-post-footer {
-  border-top: 1px dotted crimson;
-
-  margin-top: 15px;
-  padding-top: 8px;
-
-  text-align: right;
-}
-
-.tumblr-post-footer a {
-  color: crimson;
-
-  font-family: "VCROSDMono", monospace;
-  font-size: 9px;
-
-  text-decoration: none;
-}
-
-.tumblr-post-footer a:hover {
-  color: white;
-}
-
-
-/* ==============================
-   LOADING / ERROR
-   ============================== */
-
-.tumblr-loading,
-.tumblr-error,
-.tumblr-empty {
-  color: crimson;
-
-  font-family: "VCROSDMono", monospace;
-  font-size: 11px;
-
-  text-align: center;
-}
-
-
-/* ==============================
-   MOBILE FEED
-   ============================== */
-
-@media (max-width: 600px) {
-
-  .tumblr-post {
-    padding: 10px;
-  }
-
-  .tumblr-post-content {
-    font-size: 11px;
-  }
-
-  .tumblr-post-content p {
-    font-size: 11px;
-  }
-
-  .tumblr-post-content iframe {
-    width: 100% !important;
-    max-width: 100% !important;
-    aspect-ratio: 16 / 9;
-  }
-
-  .tumblr-post-content img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  .tumblr-post-title {
-    font-size: 16px;
-  }
-}
-
-
-/*===================
-TUMBLR RSS END
-=====================*/
-
-
-
-/* ==============================
-   BEAR BLOG ALIGNMENT
-   ============================== */
-
-.bearblog-post {
-  text-align: left;
-}
-
-.bearblog-post .tumblr-post-content {
-  text-align: left;
-}
-
-.bearblog-post .tumblr-post-content p,
-.bearblog-post .tumblr-post-content ul,
-.bearblog-post .tumblr-post-content li {
-  text-align: left;
-}
-
-.bearblog-post .tumblr-post-title {
-  text-align: left;
-}
-
-/* ==============================
-   BEAR BLOG ALIGNMENT END
-   ============================== */
+   
+/* =========================================================
+   TUMBLR / BEAR BLOG RSS FEED END
+   ========================================================= */
+   
