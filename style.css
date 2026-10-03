@@ -366,6 +366,12 @@ footer {
 .stamp {
   width: auto;
   height: 10px;
+  filter: grayscale(100%); /*making it grayscale*/
+  transition: filter 0.3s ease-in-out;
+}
+
+.stamp:hover {
+  filter: grayscale(0%);
 }
 
 
@@ -681,8 +687,6 @@ div.desc {
   font-size: 14px;
 }
 
-  
-
 .rss-feed-box div {
   background: #2a0b05;
   margin-bottom: 25px;
@@ -691,6 +695,14 @@ div.desc {
   max-width: 100%;
   box-sizing: border-box;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 600px)
+{
+  
+  .rss-feed-box div {
+    padding: 5px;
+  }
 }
    
 /* =========================================================
